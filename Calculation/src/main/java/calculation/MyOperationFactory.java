@@ -14,21 +14,27 @@ public class MyOperationFactory implements OperationFactory {
     public Operation getOperation(char operationChar) {
         this.operationChar = operationChar;
 
-        switch (this.operationChar) {
-            case '+':
-                operation = new OpPlus();
-                break;
-            case '-':
-                operation = new OpMinus();
-                break;
-            case '*':
-                operation = new OpMultiple();
-                break;
-            case '/':
-                operation = new OpDivision();
-                break;
-        }
-        return operation;
+            switch (this.operationChar) {
+                case '+':
+                    operation = new OpPlus();
+                    break;
+                case '-':
+                    operation = new OpMinus();
+                    break;
+                case '*':
+                    operation = new OpMultiple();
+                    break;
+                case '/':
+                    operation = new OpDivision();
+                    break;
+
+            }
+            return operation;
+/*}catch (DivByZero e){
+        System.out.println("Деление на ноль!");
+    }*/
+
     }
 }
+
 
